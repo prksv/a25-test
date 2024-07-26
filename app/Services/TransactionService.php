@@ -24,8 +24,8 @@ class TransactionService
 
         return $total
             ->map(
-                fn(int $value, string $key) => [
-                    $key => $value * self::SALARY_RATE,
+                fn(int $totalHours, string $employeeId) => [
+                    $employeeId => $totalHours * self::SALARY_RATE,
                 ]
             )
             ->values();
