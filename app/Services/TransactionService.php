@@ -4,10 +4,6 @@ namespace App\Services;
 
 use App\Models\Employee;
 use App\Models\Transaction;
-use Hash;
-use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\DB;
-use LaravelIdea\Helper\App\Models\_IH_Transaction_QB;
 
 class TransactionService
 {
