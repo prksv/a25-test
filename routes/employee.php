@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\Admin\EmployeeController;
+use App\Http\Controllers\Api\Employee;
+use App\Http\Controllers\Api\Employee\TransactionController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+Route::prefix("{employee}")->group(function () {
+    Route::post("transactions", [TransactionController::class, "store"]);
+});
